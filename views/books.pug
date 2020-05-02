@@ -1,0 +1,7 @@
+each book in books
+  div(class="masonry-item" onclick=`window.location.href="/books/${book.id}";`)
+    h2(class="masonry-title") "#{book.title}" by #{book.author}
+    p(class="masonry-description") Published in: #{book.publishDate}
+    p(class="masonry-description") #{book.description}
+    if (book.reader.given)
+      p(class="masonry-description") Given to #{book.reader.name}, due: #{book.reader.due}

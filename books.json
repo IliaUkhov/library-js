@@ -1,0 +1,62 @@
+[
+    {
+        "title": "The Caves of Steel",
+        "author": "Isaac Asimov",
+        "publishDate": "January 1957",
+        "description": "Sci-fi novel, first book in the \"Robot\" series",
+        "reader": {
+            "given": false
+        }
+    },
+    {
+        "title": "The Naked Sun",
+        "author": "Isaac Asimov",
+        "publishDate": "February 1954",
+        "description": "Sci-fi novel, second book in the \"Robot\" series",
+        "reader": {
+            "given": true,
+            "name": "Stallman",
+            "due": "2020-06-20"
+        }
+    },
+    {
+        "title": "The War of the Worlds",
+        "author": "Herbert Wells",
+        "publishDate": "1897",
+        "description": "One of the most famous sci-fi novels. Tells about alien invasion",
+        "reader": {
+            "given": false
+        }
+    },
+    {
+        "title": "Imagination #1",
+        "author": "Clark Publishing Company",
+        "publishDate": "October 1950",
+        "description": "The first issue of the famous fantasy & sci-fi magazine \"Imagination\"",
+        "reader": {
+            "given": false
+        }
+    },
+    {
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "publishDate": "1 January 1818",
+        "description": "Novel. Sometimes considered as a first sci-fi story",
+        "reader": {
+            "given": true,
+            "name": "Torvalds",
+            "due": "2020-07-01"
+        }
+    },
+    {
+        "title": "Twenty Thousand Leagues Under the Sea",
+        "author": "Jules Verne",
+        "publishDate": "23 December 1954",
+        "description": "Classic sci-fi & adventure novel",
+        "reader": {
+            "given": true,
+            "name": "Raymond",
+            "due": "2020-06-15"
+        }
+    }
+]

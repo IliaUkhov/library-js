@@ -1,0 +1,19 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/resources/style.css", type="text/css")
+    script(src="/resources/book-new.js", language="javascript")
+    title My Cosy Library
+  body
+    div(class="header")
+      div(class="card-button header-button" onclick="window.location.href=\"/books\";") Back
+    div(class="masonry-item view-card" id="form-wrapper")
+      form(class="new-book-form")
+        h2(class="masonry-title") New Book
+        input(type="text" placeholder="Enter title" id="title" name="title")
+        input(type="text" placeholder="Enter author" id="author" name="author")
+        input(type="text" placeholder="Enter publish date" id="publishDate" name="publishDate")
+        input(type="text" placeholder="Enter description" id="description" name="description")
+        button(type="submit" class="card-button ok") Add
+

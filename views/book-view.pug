@@ -1,0 +1,39 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/resources/style.css", type="text/css")
+    script(src="/resources/book-view.js", language="javascript")
+    title My Cosy Library
+  body
+    div(class="header")
+      div(class="card-button header-button" onclick="window.location.href=\"/books\";") Back
+    div(class="masonry-item view-card")
+      h2(class="masonry-title") "#{book.title}" by #{book.author}
+      p(class="masonry-description") Published in: #{book.publishDate}
+      p(class="masonry-description") #{book.description}
+      if (book.reader.given)
+        p(class="masonry-description") Given to #{book.reader.name}, due: #{book.reader.due}
+        div(class="card-button" onclick="returnBook();") Return
+      else
+        p(class="masonry-description") This book is available
+        div(class="card-button" onclick="openReaderForm();") Give
+      div(class="card-button" onclick="openEditForm();") Edit
+      div(class="card-button red" onclick="deleteBook();") Delete
+    div(class="masonry-item view-card popup-form-wrapper" id="reader-form-wrapper")
+      form(class="popup-form" id="reader-form")
+        h2(class="masonry-title") Reader
+        input(type="text" placeholder="Enter reader's name" id="name" name="name")
+        input(type="text" placeholder="Enter return due date" id="due" name="due")
+        button(type="submit" class="card-button green") OK
+        div(class="card-button red" onclick="hideReaderForm();") Cancel
+    div(class="masonry-item view-card popup-form-wrapper" id="edit-form-wrapper")
+      form(class="popup-form" id="edit-form")
+        h2(class="masonry-title") Book
+        input(type="text" placeholder="Enter title" id="title" name="title")
+        input(type="text" placeholder="Enter author" id="author" name="author")
+        input(type="text" placeholder="Enter publish date" id="publishDate" name="publishDate")
+        input(type="text" placeholder="Enter description" id="description" name="description")
+        button(type="submit" class="card-button green") OK
+        div(class="card-button red" onclick="hideEditForm();") Cancel
+

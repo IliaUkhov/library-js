@@ -1,0 +1,23 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/resources/style.css", type="text/css")
+    script(src="/resources/book-page.js", language="javascript")
+    title My Cosy Library
+  body
+    div(class="header")
+      form(id="filter-form")
+        label(for="available") Filter: available
+        input(type="checkbox" id="available" name="available" value="available" checked)
+        label(for="given") given
+        input(type="checkbox" id="given" name="given" value="given" checked)
+        label(for="startDate") with return due date from
+        input(id="startDate" name="startDate")
+        label(for="endDate") to
+        input(id="endDate" name="endDate")
+        input(type="submit" value="Apply")
+      div(class="card-button header-button" onclick="window.location.href=\"/books/new\";") New
+    div(class="masonry-wrapper")
+      div(class="masonry")
+        include books.pug
